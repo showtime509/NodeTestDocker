@@ -6,7 +6,7 @@ WORKDIR /home/Service
 
 # Bundle app source
 COPY . /home/Service
-RUN npm install
+RUN cd /home/Service; npm install
 
 EXPOSE 8080
-CMD [ "npm", "start" ]
+CMD [ "node", "/home/Service/server.js" ]
